@@ -667,7 +667,8 @@ License: MIT
 			if (this._config.chunkSize)
 			{
 				var end = this._start + this._config.chunkSize - 1;	// minus one because byte range is inclusive
-				xhr.setRequestHeader('Range', 'bytes=' + this._start + '-' + end);
+				// Temporary, comment out below line for prevent CORS at GitHub
+				// xhr.setRequestHeader('Range', 'bytes=' + this._start + '-' + end);
 			}
 
 			try {
